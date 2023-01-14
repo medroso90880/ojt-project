@@ -7,8 +7,11 @@
         <div class= 'mt-48'> 
             <x-personal-info :studentinfo="$studentinfo"></x-personal-info>
         </div>
-        <div>
+        <div class='mt-12'>
             <x-family-bg :familyinfo="$familyinfo"></x-family-bg>
+        </div>
+        <div class='mt-12'>
+            <x-residence :residence="$residence"></x-residence>
         </div>
     @endif
 </x-layout>

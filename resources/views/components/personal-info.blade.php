@@ -4,7 +4,6 @@
         PERSONAL INFORMATION
     </h2>
 </header>
-</div>
 
 <!--Name-->
 {{-- <form method="POST" action="/register/store" enctype="multipart/form-data"> --}}
@@ -79,3 +78,4 @@
             </div>
         </div>
     </div>
+</div>

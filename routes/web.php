@@ -18,7 +18,9 @@ use App\Http\Controllers\UserController;
 Route::get('/',[UserController::class, 'welcome']);
 Route::get('/home',[UserController::class, 'home']);
 
-Route::get('/student-info/{studentinfo}', [UserController::class, 'personalInfo'])->middleware('auth');
+Route::get('/student-info/{studentinfo}', [UserController::class, 'personalInfo']);
+Route::get('/student-health/{studentinfo}', [UserController::class, 'health']);
+Route::get('/student-educational-background/{studentinfo}', [UserController::class, 'educationalBg']);
 
 Route::get('/auth/google/redirect', [AuthController::class, 'redirect']);
 Route::get('/auth/google/callback', [AuthController::class, 'callback']);
