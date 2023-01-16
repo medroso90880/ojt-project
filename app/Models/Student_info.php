@@ -10,6 +10,7 @@ class Student_info extends Model
 {
     use HasFactory;
     use Sortable;
+   // protected $fillable = ['id'];
     
     public function scopeFilter($query, array $filters)
     {

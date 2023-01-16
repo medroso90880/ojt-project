@@ -23,7 +23,28 @@ class AuthController extends Controller
             'password' =>Hash::make(Str::random(24))
         ]);
         Auth::login($user);
- 
+
         return redirect('/home');
     }
+
+    public function redirectStudent(){
+        return Socialite::driver('google')->redirect();
+    }
+    public function callbackStudent(){
+        $user_type = 'student';
+        $googleUser = Socialite::driver('google')->user();
+        $user = User::updateOrCreate([
+            'email' => $googleUser->email,
+         
+        ],[
+            'name' => $googleUser->name,
+           
+            'password' =>Hash::make(Str::random(24))
+        ]);
+        Auth::login($user);
+        $user->user_type = $user_type;
+        return redirect('/home');
+    }
+
+
 }

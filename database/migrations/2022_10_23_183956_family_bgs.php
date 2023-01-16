@@ -32,7 +32,7 @@ return new class extends Migration
             $table->string('contact_number_mother');
             $table->string('marital_status');
             $table->string('name_sibling')->nullable();
-            $table->integer('age_sibling')->nullable();
+            $table->string('age_sibling')->nullable();
             $table->string('educational_attain_sibling')->nullable();
             $table->string('school_attended_sibling')->nullable();
             $table->string('occupation_sibling')->nullable();
